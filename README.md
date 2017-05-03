@@ -1,5 +1,5 @@
 # OSP7
-This is the repo for the csn232 OSP.
+This is the repo for the csn232
 
 # ParallelDE
 One usually can run only one DE ( Desktop Environment at a time)
@@ -23,9 +23,24 @@ We then make a regular scan of the file test.t for 2 system calls "MOVED_TO" and
 
 The net effect would be that from now on any download made or any file copy created on the targeted directory (Downloads here) will suitably notify us.
 
-
 # Welcome Notifications
 /etc/init is run by the OS when a user logs in. The file is edited or a suitable script is added to startup to get custom welcome notes.
 
 # Other GRUB Modifications
 Other ways to customize the boot screen is to edit /etc/default/grub for relevant flags which can create required effects on boot.
+
+# Customizing the desktop background:
+Instead of having a static background, the background can be varied continuosly at varying time intervals.
+
+The wallpapers in ubuntu are stored in /usr/share/backgrounds location.
+The various settings like duration and images are stored in xml files (trusty.xml in my case).
+The settings can be changed as per user requirements to vary the apperarance of desktop. 
+ 
+The start-time for the variation can be set using the starttime tag in the xml file. Settings can be added and the new xml file can be stored in the specific location containing trusty.xml file.
+
+# Adding boot sound 
+The sound is added at the instant just before the bootloader screen where we can select the os to boot.
+
+For this, changes can be made in the etc/default/grub file. GRUB_INIT_TUNE can be set at the desired value to play the sound at grub startup as required by the user. The value is given in the form of a series of numbers.
+
+The syntax is: "GRUB_INIT_TUNE="tempo [pitch1 duration1] [pitch2 duration2] ...""
