@@ -1,0 +1,9 @@
+#Edit at /etc/default/grub
+
+GRUB_GFXMODE="1920x1080x24"
+
+GRUB_SAVEDEFAULT="true"
+export GRUB_COLOR_NORMAL="black/black"
+export GRUB_COLOR_HIGHLIGHT="light-blue/black"
+export GRUB_MENU_PICTURE="/home/shubham/Documents/git/OSP7/resources/2560x1440-_ljl1499.jpg"
+GRUB_FONT="/boot/grub/unicode.pf2"
